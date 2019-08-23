@@ -1,4 +1,4 @@
-# Skeleton
+# Skeleton-AEM
 
 Jump-start your front-end development for AEM. Skeleton is a HTML5 Boilerplate build upon [Rosid](https://github.com/electerious/Rosid).
 
