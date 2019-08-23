@@ -1,27 +1,26 @@
 {
-  "name": "skeleton-components",
-  "version": "1.3.0",
+  "name": "skeleton-aem",
+  "version": "1.0.0",
   "description": "A front-end template build upon Rosid",
   "private": true,
   "authors": [
-    "Tobias Reich <tobias@electerious.com>"
+    "Tobias Reich <tobias@electerious.com>",
+    "Dennis Schad <dennis.schad1991@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/electerious/Skeleton-Components.git"
+    "url": "https://github.com/freedeebee/Skeleton-AEM.git"
   },
   "license": "MIT",
   "scripts": {
-    "start": "rosid serve src/ -o -s '/index.html'",
-    "compile": "rosid compile src/ dist/ -i '**/_*' -i '**/*.{data,config}.{js,json}'"
+    "start": "rosid serve src/ -o -s '/index.html'"
   },
   "dependencies": {
-    "basicgrid": "^3.1.2",
     "normalize.css": "^8.0.1",
     "rosid": "^10.0.0",
     "rosid-handler-js": "^12.1.0",
+    "rosid-handler-less": "^1.0.1",
     "rosid-handler-malvid": "^3.0.7",
-    "rosid-handler-njk": "^7.2.0",
-    "rosid-handler-sass": "^6.0.4"
+    "rosid-handler-sightly": "^1.1.1"
   }
 }

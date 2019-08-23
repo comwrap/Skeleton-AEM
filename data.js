@@ -1,8 +1,8 @@
 module.exports = {
 	styles: [
-		'/styles/main.css'
+		'/clientlibs/clientlib-site/main.css'
 	],
 	scripts: [
-		'/scripts/main.js'
+		'/clientlibs/clientlib-site/main.js'
 	]
 }

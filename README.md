@@ -1,6 +1,6 @@
 # Skeleton
 
-Jump-start your front-end development. Skeleton is a HTML5 Boilerplate build upon [Rosid](https://github.com/electerious/Rosid).
+Jump-start your front-end development for AEM. Skeleton is a HTML5 Boilerplate build upon [Rosid](https://github.com/electerious/Rosid).
 
 ## Contents
 
@@ -16,8 +16,8 @@ Jump-start your front-end development. Skeleton is a HTML5 Boilerplate build upo
 
 ## Features
 
-- Skeleton is a base for all your everyday web-projects. Jump-start your work and develop without starting from zero. Everything you need one fork away.
-- This project is powered by [Rosid](https://github.com/electerious/Rosid), a web server with just-in-time pre-processing. JS (with Babel, UglifyJS), SASS (with cssnano, Autoprefixer) and Nunjucks can be used right out of the box.
+- Skeleton is a base for all your AEM web-projects. Jump-start your work and develop without starting from zero. Everything you need one fork away.
+- This project is powered by [Rosid](https://github.com/electerious/Rosid), a web server with just-in-time pre-processing. JS (with Babel, UglifyJS), LESS (with cssnano, Autoprefixer) and Sightly/HTL can be used right out of the box.
 - Skeleton is just the beginning. Fork it and extend it to your own needs. The predefined structure gives you flexibility and can be modified with ease.
 
 ## Requirements
@@ -41,18 +41,10 @@ yarn install
 
 ### Develop
 
-Start developing using the following command. You browser will open, wait for code-changes and live-reload instantly when you update your files. JS, SASS and Nunjucks will be compiled on-the-fly.
+Start developing using the following command. You browser will open, wait for code-changes and live-reload instantly when you update your files. JS, LESS and Sightly/HTL will be compiled on-the-fly.
 
 ```sh
 yarn start
-```
-
-### Compile
-
-Ready for prime time? Export all files, compiled and prepared for your audience. Simple upload the final `dist/` folder to your server and relax. Take a seat and enjoy a delicious burger from your favorite restaurant.
-
-```sh
-yarn run compile
 ```
 
 ### UI
@@ -62,22 +54,6 @@ Skeleton includes [Malvid](https://github.com/Malvid/Malvid) to help you build a
 ## Docker
 
 The included Dockerfile lets you build an image which compiles your site. In this case only Docker needs to be installed on the system. No other dependencies are required.
-
-### Build
-
-Build an image from the Dockerfile. This has to be done each time you have modified the project. The new source will be copied into the image.
-
-```sh
-docker build -t electerious/skeleton .
-```
-
-### Compile
-
-Start a container to compile your site. The container will exit automatically when all tasks have been finished. The mounted volume will contain all compiled files.
-
-```sh
-docker run --rm -tv "$(pwd)/dist:/dist" electerious/skeleton
-```
 
 ## Troubleshooting
 

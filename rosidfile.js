@@ -1,25 +1,27 @@
+const render = require('rosid-handler-sightly')
+
 module.exports = [
 	{
 		name: 'JS',
-		path: 'scripts/**/[^_]*.js',
+		path: 'clientlibs/clientlib-site/components/*.js',
 		handler: 'rosid-handler-js'
 	},
 	{
-		name: 'SASS',
-		path: 'styles/**/[^_]*.{css,scss}*',
-		handler: 'rosid-handler-sass',
+		name: 'LESS',
+		path: 'clientlibs/**/*.{css,less}*',
+		handler: 'rosid-handler-less',
 		opts: {
-			in: '.scss'
+			in: '.less'
 		}
 	},
 	{
-		name: 'NJK',
-		path: 'components/[^_]*/[^_]*.{html,njk}*',
-		handler: 'rosid-handler-njk',
+		name: 'HTL',
+		path: 'components/**/*.{html, htl}*',
+		handler: 'rosid-handler-sightly',
 		opts: {
-			prepend: '{% extends "../_layout.njk" %}{% block body %}',
-			append: '{% endblock %}',
-			src: 'src/components/',
+			prepend: render('src/components/_base_header.html', {data: require('./data')}),
+			append: render('src/components/_base_header.html', { data: require('./data') }),
+			in: '.html',
 			data: 'data.js'
 		}
 	},
@@ -28,7 +30,8 @@ module.exports = [
 		path: 'index.{html,html.json}',
 		handler: 'rosid-handler-malvid',
 		opts: {
-			src: 'src/'
+			src: 'src/',
+			pattern: 'components/**/[^_]*.{ejs,njk,hbs,twig,html,htl}'
 		}
 	}
 ]
